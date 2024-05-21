@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../styles/Header.css";
@@ -6,7 +6,19 @@ import logo from "../assets/images/logo.png";
 
 const Header = () => {
   return (
-    <header className="navbar navbar-expand-lg navbar-dark" role="banner">
+    <header
+      className="navbar navbar-expand-lg navbar-dark"
+      role="banner"
+      style={{
+        background: "rgba(0, 0, 0, 0.8)",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        zIndex: 1000,
+        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+      }}
+    >
       <div className="container">
         <div className="navbar-brand">
           <a href="/">
