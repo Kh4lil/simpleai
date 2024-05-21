@@ -1,0 +1,71 @@
+header {
+  background: transparent;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-brand img {
+  max-height: 30px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  color: #fff;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+.navbar-nav .nav-item.th-accent .nav-link {
+  border: 1px solid #fff;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #1c544c !important;
+  background-color: transparent !important;
+}
+
+.themo_cart_icon {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.themo_cart_icon a {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .themo_cart_icon {
+    position: static;
+    display: block;
+    text-align: center;
+  }
+}
