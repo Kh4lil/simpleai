@@ -65,6 +65,15 @@ header {
   font-size: 20px;
 }
 
+.header-scrolled {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ) !important; /* Slightly opaque black background */
+}
+
 @media (max-width: 767px) {
   .navbar-nav {
     text-align: center;
