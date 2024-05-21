@@ -7,6 +7,7 @@ import FeaturesSection from "./components/FeaturesSection";
 import Footer from "./components/Footer";
 import "./styles/global.css";
 import AffiliateSection from "./components/AffiliateSection";
+import HowItWorksSection from "./components/HowItWorksSection";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <HeroSection />
         <FeaturesSection />
         <AffiliateSection />
+        <HowItWorksSection />
       </main>
       <Footer />
     </div>
