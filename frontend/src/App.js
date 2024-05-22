@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import "./styles/global.css";
 import AffiliateSection from "./components/AffiliateSection";
 import HowItWorksSection from "./components/HowItWorksSection";
+import FAQSection from "./components/FAQSection";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <FeaturesSection />
         <AffiliateSection />
         <HowItWorksSection />
+        <FAQSection />
       </main>
       <Footer />
     </div>
