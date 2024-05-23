@@ -1,26 +1,32 @@
-header {
-  background: rgba(0, 0, 0, 0); /* Fully transparent */
+header.custom-header {
+  background: rgba(0, 0, 0, 0);
   color: #fff;
-  padding: 10px 0;
+  padding: 10px 20px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   transition: background 0.3s ease;
   z-index: 1000;
-  box-shadow: none; /* No shadow */
+  box-shadow: none;
+  margin: 0;
+}
+
+header.custom-header.custom-header-scrolled {
+  background: rgba(37, 43, 45, 255) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar,
 .navbar-default {
-  background-color: transparent !important; /* Ensure navbar is also transparent */
-  border: none; /* Remove borders that might be visible */
+  background-color: transparent !important;
+  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  margin-top: 20px;
-  box-shadow: none; /* Ensure no shadow is applied here either */
+  padding: 0;
+  margin-top: 0;
+  box-shadow: none;
 }
 
 .navbar-brand img {
@@ -63,15 +69,6 @@ header {
 .themo_cart_icon a {
   color: #fff;
   font-size: 20px;
-}
-
-.header-scrolled {
-  background: rgba(
-    0,
-    0,
-    0,
-    0.8
-  ) !important; /* Slightly opaque black background */
 }
 
 @media (max-width: 767px) {

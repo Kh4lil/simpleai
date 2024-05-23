@@ -14,19 +14,21 @@ import GetInvolvedSection from "./components/GetInvolvedSection";
 
 const App = () => {
   return (
-    <div className="app-container">
-      <div className="background-overlay"></div>
-      <Header />
-      <main>
-        <HeroSection />
-        <FeaturesSection />
-        <AffiliateSection />
-        <HowItWorksSection />
-        <FAQSection />
-        <FindOutMoreSection />
-        <GetInvolvedSection />
-      </main>
-      <Footer />
+    <div className="app-wrapper">
+      <div className="app-container">
+        <div className="background-overlay"></div>
+        <Header />
+        <main>
+          <HeroSection />
+          <FeaturesSection />
+          <AffiliateSection />
+          <HowItWorksSection />
+          <FAQSection />
+          <FindOutMoreSection />
+          <GetInvolvedSection />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
