@@ -10,6 +10,7 @@ import AffiliateSection from "./components/AffiliateSection";
 import HowItWorksSection from "./components/HowItWorksSection";
 import FAQSection from "./components/FAQSection";
 import FindOutMoreSection from "./components/FindOutMoreSection";
+import GetInvolvedSection from "./components/GetInvolvedSection";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <HowItWorksSection />
         <FAQSection />
         <FindOutMoreSection />
+        <GetInvolvedSection />
       </main>
       <Footer />
     </div>
