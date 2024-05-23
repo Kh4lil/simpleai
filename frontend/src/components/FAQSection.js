@@ -38,7 +38,7 @@ const FAQSection = () => {
 
   return (
     <div className="faq-section">
-      <div className="container">
+      <div className="faq-container">
         <div className="faq-content">
           <h2>Questions</h2>
           <p>

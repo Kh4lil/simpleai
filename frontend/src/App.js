@@ -9,6 +9,7 @@ import "./styles/global.css";
 import AffiliateSection from "./components/AffiliateSection";
 import HowItWorksSection from "./components/HowItWorksSection";
 import FAQSection from "./components/FAQSection";
+import FindOutMoreSection from "./components/FindOutMoreSection";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <AffiliateSection />
         <HowItWorksSection />
         <FAQSection />
+        <FindOutMoreSection />
       </main>
       <Footer />
     </div>
