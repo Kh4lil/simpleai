@@ -1,0 +1,72 @@
+.about-us-hero {
+  background-color: #222;
+  color: white;
+  padding: 150px 0;
+}
+
+.about-us-hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-us-hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-us-hero .title-section {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.about-us-hero .title-section h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.about-us-hero .text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.about-us-hero .headline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about-us-hero .headline h2 {
+  font-size: 2em;
+  margin-right: 20px;
+  max-width: 400px;
+}
+
+.about-us-hero .headline p {
+  font-size: 1.2em;
+  max-width: 600px;
+}
+
+.about-us-hero .stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about-us-hero .stat {
+  flex: 1;
+  margin: 20px;
+  text-align: center;
+}
+
+.about-us-hero .stat h3 {
+  font-size: 2em;
+  color: #21d07a;
+}
+
+.about-us-hero .stat p {
+  font-size: 1em;
+}
