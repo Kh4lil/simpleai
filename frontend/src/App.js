@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import "./styles/global.css";
+import ContactUs from "./pages/ContactUs";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
             </Routes>
           </main>
           <Footer />

@@ -15,6 +15,14 @@
   padding: 0 20px;
 }
 
+.text-container {
+  flex: 1;
+}
+
+.button-container {
+  flex-shrink: 0;
+}
+
 .call-to-action-section h2 {
   color: white;
   font-size: 2em;

@@ -5,8 +5,12 @@ const CallToActionSection = () => {
   return (
     <section className="call-to-action-section">
       <div className="container">
-        <h2>Ready to take your startup to the next level?</h2>
-        <button className="cta-button">Contact Us</button>
+        <div className="text-container">
+          <h2>Ready to take your startup to the next level?</h2>
+        </div>
+        <div className="button-container">
+          <button className="cta-button">Contact Us</button>
+        </div>
       </div>
     </section>
   );
