@@ -1,7 +1,7 @@
 .our-approach {
   display: flex;
   align-items: center;
-  background-color: #1e1e1e; /* Slightly lighter than pure black */
+  background-color: #1e1e1e;
   color: white;
   padding: 60px 0;
 }
@@ -9,7 +9,7 @@
 .our-approach .container {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Ensure items are centered vertically */
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -46,7 +46,7 @@
   font-weight: bold;
   background: none;
   cursor: pointer;
-  border-radius: 50px; /* Rounded button */
+  border-radius: 50px;
   transition: all 0.3s ease;
 }
 
