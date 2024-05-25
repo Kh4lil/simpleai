@@ -4,6 +4,7 @@ import "../styles/AboutUsHero.css";
 import OurApproachSection from "../components/OurApproachSection";
 import WhatsOurSecretSection from "../components/WhatsOurSecretSection";
 import OurValuesSection from "../components/OurValuesSection";
+import AffiliateSection from "../components/AffiliateSection";
 
 const AboutUs = () => {
   return (
@@ -12,6 +13,7 @@ const AboutUs = () => {
       <OurApproachSection />
       <WhatsOurSecretSection />
       <OurValuesSection />
+      <AffiliateSection />
     </>
   );
 };
