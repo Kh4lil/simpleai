@@ -5,6 +5,7 @@ import OurApproachSection from "../components/OurApproachSection";
 import WhatsOurSecretSection from "../components/WhatsOurSecretSection";
 import OurValuesSection from "../components/OurValuesSection";
 import AffiliateSection from "../components/AffiliateSection";
+import CallToActionSection from "../components/CallToActionSection";
 
 const AboutUs = () => {
   return (
@@ -14,6 +15,7 @@ const AboutUs = () => {
       <WhatsOurSecretSection />
       <OurValuesSection />
       <AffiliateSection />
+      <CallToActionSection />
     </>
   );
 };
