@@ -35,7 +35,7 @@
   flex: 0 0 auto;
   max-width: 15%;
   text-align: center;
-  margin: 0 75px; /* Maintain spacing between columns */
+  margin: 0 75px;
 }
 
 .elementor-image img {
@@ -56,9 +56,9 @@
 }
 
 .arrow-left {
-  left: 0px; /* Position arrows closer to the container */
+  left: 0px;
 }
 
 .arrow-right {
-  right: 0px; /* Position arrows closer to the container */
+  right: 0px;
 }

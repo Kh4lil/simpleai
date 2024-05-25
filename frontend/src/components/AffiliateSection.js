@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import "../styles/AffiliateSection.css";
 
 const icons = [
@@ -25,20 +26,25 @@ const AffiliateSection = () => {
     setCurrentIndex((currentIndex + 1) % icons.length);
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: handleNextClick,
+    onSwipedRight: handlePrevClick,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   const getVisibleIcons = () => {
-    const start = currentIndex;
-    const end = (currentIndex + 5) % icons.length;
-    if (start < end) {
-      return icons.slice(start, end);
-    } else {
-      return [...icons.slice(start), ...icons.slice(0, end)];
+    const visibleIcons = [];
+    for (let i = 0; i < 5; i++) {
+      visibleIcons.push(icons[(currentIndex + i) % icons.length]);
     }
+    return visibleIcons;
   };
 
   return (
     <section className="affiliate-section">
       <div className="trusted-by-text">TRUSTED BY</div>
-      <div className="elementor-container">
+      <div className="elementor-container" {...handlers}>
         <div className="arrow arrow-left" onClick={handlePrevClick}>
           &#9664;
         </div>
