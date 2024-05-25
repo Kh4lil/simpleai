@@ -6,6 +6,7 @@ import WhatsOurSecretSection from "../components/WhatsOurSecretSection";
 import OurValuesSection from "../components/OurValuesSection";
 import AffiliateSection from "../components/AffiliateSection";
 import CallToActionSection from "../components/CallToActionSection";
+import SummaryFooter from "../components/SummaryFooter";
 
 const AboutUs = () => {
   return (
@@ -16,6 +17,7 @@ const AboutUs = () => {
       <OurValuesSection />
       <AffiliateSection />
       <CallToActionSection />
+      <SummaryFooter />
     </>
   );
 };
