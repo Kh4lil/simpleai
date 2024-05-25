@@ -1,0 +1,41 @@
+.call-to-action-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #27ae60;
+  padding: 60px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.call-to-action-section h2 {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid white;
+  color: white;
+  background: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: #27ae60;
+}
