@@ -1,9 +1,11 @@
 import React from "react";
+import StarryBackground from "./StarryBackground";
 import "../styles/HeroSection.css";
 
 const HeroSection = () => {
   return (
     <section id="hero" className="hero-section">
+      <StarryBackground />
       <div className="hero-container">
         <div className="hero-content">
           <p className="hero-subtitle">SAFE / SECURE / PRIVATE</p>
