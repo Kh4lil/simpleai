@@ -1,11 +1,18 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/CareersHero.css";
 import careerImage from "../assets/images/careers1.jpg";
 
 const CareersHero = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section className="careers-hero">
-      <div className="container">
+      <animated.div ref={ref} style={animation} className="container">
         <div className="title-section">
           <h1>Careers</h1>
         </div>
@@ -27,7 +34,7 @@ const CareersHero = () => {
             <img src={careerImage} alt="Career" />
           </div>
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

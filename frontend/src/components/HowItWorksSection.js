@@ -1,7 +1,14 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/HowItWorksSection.css";
 
 const HowItWorksSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section id="how-it-works" className="how-it-works-section">
       <div className="container">
@@ -14,7 +21,11 @@ const HowItWorksSection = () => {
             </p>
           </div>
         </div>
-        <div className="row step-container">
+        <animated.div
+          ref={ref}
+          style={animation}
+          className="row step-container"
+        >
           <div className="col-md-6 step-box">
             <div className="how-it-works-item">
               <div className="step-number">1</div>
@@ -55,7 +66,7 @@ const HowItWorksSection = () => {
               </p>
             </div>
           </div>
-        </div>
+        </animated.div>
       </div>
     </section>
   );

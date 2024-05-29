@@ -1,10 +1,21 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/FindOutMoreSection.css";
 
 const FindOutMoreSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section id="find-out-more" className="find-out-more-section">
-      <div className="find-out-more-container">
+      <animated.div
+        ref={ref}
+        style={animation}
+        className="find-out-more-container"
+      >
         <div className="header">
           <h2>Find out more</h2>
           <p>
@@ -47,7 +58,7 @@ const FindOutMoreSection = () => {
             <a href="#0">Reach out »</a>
           </div>
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

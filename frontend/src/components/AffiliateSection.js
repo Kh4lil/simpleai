@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/AffiliateSection.css";
 
 const icons = [
@@ -17,6 +19,10 @@ const icons = [
 
 const AffiliateSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
 
   const handlePrevClick = () => {
     setCurrentIndex((currentIndex - 1 + icons.length) % icons.length);
@@ -43,31 +49,33 @@ const AffiliateSection = () => {
 
   return (
     <section className="affiliate-section">
-      <div className="trusted-by-text">TRUSTED BY</div>
-      <div className="elementor-container" {...handlers}>
-        <div className="arrow arrow-left" onClick={handlePrevClick}>
-          &#9664;
-        </div>
-        <div className="elementor-row">
-          {getVisibleIcons().map((src, index) => (
-            <div className="elementor-column" key={index}>
-              <div className="elementor-image">
-                <img
-                  decoding="async"
-                  width="600"
-                  height="600"
-                  src={src}
-                  alt={`Icon ${index + 1}`}
-                  loading="lazy"
-                />
+      <animated.div ref={ref} style={animation}>
+        <div className="trusted-by-text">TRUSTED BY</div>
+        <div className="elementor-container" {...handlers}>
+          <div className="arrow arrow-left" onClick={handlePrevClick}>
+            &#9664;
+          </div>
+          <div className="elementor-row">
+            {getVisibleIcons().map((src, index) => (
+              <div className="elementor-column" key={index}>
+                <div className="elementor-image">
+                  <img
+                    decoding="async"
+                    width="600"
+                    height="600"
+                    src={src}
+                    alt={`Icon ${index + 1}`}
+                    loading="lazy"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="arrow arrow-right" onClick={handleNextClick}>
+            &#9654;
+          </div>
         </div>
-        <div className="arrow arrow-right" onClick={handleNextClick}>
-          &#9654;
-        </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

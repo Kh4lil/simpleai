@@ -1,11 +1,18 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/OurApproachSection.css";
-import teamImage from "../assets/images/team1.jpg"; // Import the image
+import teamImage from "../assets/images/team1.jpg";
 
 const OurApproachSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section className="our-approach">
-      <div className="container">
+      <animated.div ref={ref} style={animation} className="container">
         <div className="text-content">
           <h4>OUR APPROACH</h4>
           <h2>Results oriented</h2>
@@ -24,7 +31,7 @@ const OurApproachSection = () => {
         <div className="image-content">
           <img src={teamImage} alt="Team working" />
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

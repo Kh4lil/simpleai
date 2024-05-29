@@ -1,4 +1,6 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/JobListingSection.css";
 
 const jobs = [
@@ -25,9 +27,18 @@ const jobs = [
 ];
 
 const JobListingSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section id="job-listings" className="job-listing-section">
-      <div className="job-listing-container">
+      <animated.div
+        ref={ref}
+        style={animation}
+        className="job-listing-container"
+      >
         <div className="header">
           <h2>Career Opportunities</h2>
         </div>
@@ -44,7 +55,7 @@ const JobListingSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

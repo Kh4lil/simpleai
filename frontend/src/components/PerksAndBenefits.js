@@ -1,4 +1,6 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/PerksAndBenefits.css";
 
 const perks = [
@@ -41,9 +43,18 @@ const perks = [
 ];
 
 const PerksAndBenefits = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" }, // Appear from further down
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section id="perks-benefits" className="perks-benefits-section">
-      <div className="perks-benefits-container">
+      <animated.div
+        ref={ref}
+        style={animation}
+        className="perks-benefits-container"
+      >
         <div className="header">
           <h2>Perks and Benefits</h2>
         </div>
@@ -58,7 +69,7 @@ const PerksAndBenefits = () => {
             </div>
           ))}
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

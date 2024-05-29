@@ -1,10 +1,17 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/SummaryFooter.css";
 
 const SummaryFooter = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <footer className="summary-footer">
-      <div className="container">
+      <animated.div ref={ref} style={animation} className="container">
         <div className="footer-content">
           <div className="footer-column about-us">
             <h3>About Us</h3>
@@ -60,7 +67,7 @@ const SummaryFooter = () => {
             </form>
           </div>
         </div>
-      </div>
+      </animated.div>
     </footer>
   );
 };

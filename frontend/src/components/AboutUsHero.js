@@ -1,10 +1,17 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/AboutUsHero.css";
 
 const AboutUsHero = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section className="about-us-hero">
-      <div className="container">
+      <animated.div ref={ref} style={animation} className="container">
         <div className="content">
           <div className="title-section">
             <h1>About Us</h1>
@@ -39,7 +46,7 @@ const AboutUsHero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };
