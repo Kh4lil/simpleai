@@ -56,6 +56,11 @@ header.custom-header.custom-header-scrolled {
   color: #fff !important;
   padding: 10px 20px;
   font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.clicked {
+  color: #1c544c !important; /* Green when clicked */
 }
 
 .navbar-nav .nav-item.th-accent .nav-link {

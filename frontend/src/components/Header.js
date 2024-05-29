@@ -26,6 +26,7 @@ const throttle = (func, limit) => {
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [clickedLink, setClickedLink] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +36,11 @@ const Header = () => {
       } else {
         setScrolled(false);
       }
+
+      // Reset the clicked link when scrolling
+      if (clickedLink) {
+        setClickedLink("");
+      }
     };
 
     const throttledHandleScroll = throttle(handleScroll, 100);
@@ -43,10 +49,11 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
     };
-  }, []);
+  }, [clickedLink]);
 
   const handleLinkClick = (e, targetId) => {
     e.preventDefault();
+    setClickedLink(targetId);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       window.scrollTo({
@@ -54,6 +61,11 @@ const Header = () => {
         behavior: "smooth",
       });
     }
+
+    // Force re-render after scroll completes
+    setTimeout(() => {
+      setClickedLink("");
+    }, 500); // Adjust timeout as needed
   };
 
   return (
@@ -92,16 +104,20 @@ const Header = () => {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a
-                className="nav-link"
+                className={`nav-link ${
+                  clickedLink === "features-section" ? "clicked" : ""
+                }`}
                 href="#features-section"
                 onClick={(e) => handleLinkClick(e, "features-section")}
               >
-                Features
+                Services
               </a>
             </li>
             <li className="nav-item">
               <a
-                className="nav-link"
+                className={`nav-link ${
+                  clickedLink === "how-it-works-section" ? "clicked" : ""
+                }`}
                 href="#how-it-works-section"
                 onClick={(e) => handleLinkClick(e, "how-it-works-section")}
               >
@@ -110,7 +126,9 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link"
+                className={`nav-link ${
+                  clickedLink === "faq-section" ? "clicked" : ""
+                }`}
                 href="#faq-section"
                 onClick={(e) => handleLinkClick(e, "faq-section")}
               >
@@ -119,7 +137,9 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link"
+                className={`nav-link ${
+                  clickedLink === "find-out-more-section" ? "clicked" : ""
+                }`}
                 href="#find-out-more-section"
                 onClick={(e) => handleLinkClick(e, "find-out-more-section")}
               >
@@ -128,7 +148,9 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link"
+                className={`nav-link ${
+                  clickedLink === "ourBenefits-section" ? "clicked" : ""
+                }`}
                 href="#ourBenefits-section"
                 onClick={(e) => handleLinkClick(e, "ourBenefits-section")}
               >
