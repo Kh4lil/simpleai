@@ -1,0 +1,51 @@
+.contact-banner-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #27ae60;
+  padding: 60px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.button-container {
+  flex-shrink: 0;
+}
+
+.contact-banner-section h2 {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid white;
+  color: white;
+  background: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: white;
+  color: #27ae60;
+}
