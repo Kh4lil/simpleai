@@ -4,7 +4,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../styles/Header.css";
 import logo from "../assets/images/logo-placeholder.png";
 
-// Throttle function to limit the rate of scroll event handling
 const throttle = (func, limit) => {
   let lastFunc;
   let lastRan;
@@ -31,34 +30,31 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      console.log("Scroll position:", scrollY);
-
       if (scrollY > 50) {
-        if (!scrolled) {
-          setScrolled(true);
-          console.log("Scrolled: true");
-        }
+        setScrolled(true);
       } else {
-        if (scrolled) {
-          setScrolled(false);
-          console.log("Scrolled: false");
-        }
+        setScrolled(false);
       }
     };
 
     const throttledHandleScroll = throttle(handleScroll, 100);
     window.addEventListener("scroll", throttledHandleScroll);
-    console.log("Scroll event listener added");
 
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
-      console.log("Scroll event listener removed");
     };
-  }, [scrolled]);
+  }, []);
 
-  useEffect(() => {
-    console.log("Scrolled state changed:", scrolled);
-  }, [scrolled]);
+  const handleLinkClick = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <header
@@ -95,52 +91,55 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#pages">
-                Pages
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#portfolio">
-                Portfolio
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#features">
+              <a
+                className="nav-link"
+                href="#features-section"
+                onClick={(e) => handleLinkClick(e, "features-section")}
+              >
                 Features
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#blog">
-                Blog
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#shop">
-                Shop
-              </a>
-            </li>
-            <li className="nav-item th-accent">
               <a
                 className="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://1.envato.market/stratus"
+                href="#how-it-works-section"
+                onClick={(e) => handleLinkClick(e, "how-it-works-section")}
               >
-                Purchase
+                Method
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/cart">
-                <i className="fas fa-shopping-cart"></i>
+              <a
+                className="nav-link"
+                href="#faq-section"
+                onClick={(e) => handleLinkClick(e, "faq-section")}
+              >
+                FAQ
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="#find-out-more-section"
+                onClick={(e) => handleLinkClick(e, "find-out-more-section")}
+              >
+                Discover
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="#ourBenefits-section"
+                onClick={(e) => handleLinkClick(e, "ourBenefits-section")}
+              >
+                Our Twist
               </a>
             </li>
           </ul>
         </div>
+        <a className="cta-button" href="/schedule-consultation">
+          Schedule a Free Consultation
+        </a>
       </div>
     </header>
   );
