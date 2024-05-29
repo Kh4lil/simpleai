@@ -1,0 +1,41 @@
+.career-image-banner {
+  background-color: #222;
+  padding: 50px 0;
+}
+
+.career-image-banner .container {
+  max-width: 2500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.career-image-banner .image-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.career-image-banner .image-wrapper img {
+  width: 320px;
+  height: 480px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.career-image-banner .img1 {
+  margin-top: 0;
+}
+
+.career-image-banner .img2 {
+  margin-top: 50px;
+}
+
+.career-image-banner .img3 {
+  margin-top: 0;
+}
+
+.career-image-banner .img4 {
+  margin-top: 50px;
+}

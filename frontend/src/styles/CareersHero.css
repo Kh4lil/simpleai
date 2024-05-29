@@ -1,0 +1,54 @@
+.careers-hero {
+  background-color: #222;
+  color: white;
+  padding: 150px 0;
+}
+
+.careers-hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.careers-hero .title-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.careers-hero .title-section h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.careers-hero .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.careers-hero .text-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.careers-hero .headline h2.secondary-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.careers-hero .headline p {
+  font-size: 1.2em;
+  max-width: 600px;
+}
+
+.careers-hero .image-section {
+  flex: 1;
+  max-width: 40%;
+}
+
+.careers-hero .image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
