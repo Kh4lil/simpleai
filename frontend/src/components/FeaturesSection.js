@@ -1,11 +1,18 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/FeaturesSection.css";
 
 const FeaturesSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section id="powerful" className="features-section">
       <div className="container">
-        <div className="features-grid">
+        <animated.div ref={ref} style={animation} className="features-grid">
           <div className="features-header">
             <h2>Powerful features</h2>
             <p>
@@ -78,7 +85,7 @@ const FeaturesSection = () => {
               <a href="#0">Learn more »</a>
             </p>
           </div>
-        </div>
+        </animated.div>
       </div>
     </section>
   );

@@ -1,13 +1,20 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/WhatsOurSecretSection.css";
 import person1 from "../assets/images/person1.jpg";
 import person2 from "../assets/images/person2.jpg";
 import person3 from "../assets/images/person3.jpg";
 
 const WhatsOurSecretSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section className="whats-our-secret">
-      <div className="container">
+      <animated.div ref={ref} style={animation} className="container">
         <div className="image-content">
           <img
             src={person1}
@@ -47,7 +54,7 @@ const WhatsOurSecretSection = () => {
             Meet the Team
           </button>
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

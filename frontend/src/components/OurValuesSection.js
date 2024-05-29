@@ -1,4 +1,6 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/OurValuesSection.css";
 
 const values = [
@@ -41,9 +43,18 @@ const values = [
 ];
 
 const OurValuesSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section id="our-values" className="our-values-section">
-      <div className="our-values-container">
+      <animated.div
+        ref={ref}
+        style={animation}
+        className="our-values-container"
+      >
         <div className="header">
           <h2>Our values</h2>
         </div>
@@ -58,7 +69,7 @@ const OurValuesSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

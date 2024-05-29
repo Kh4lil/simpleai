@@ -1,10 +1,21 @@
 import React from "react";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/GetInvolvedSection.css";
 
 const GetInvolvedSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section id="get-involved" className="get-involved-section">
-      <div className="get-involved-container">
+      <animated.div
+        ref={ref}
+        style={animation}
+        className="get-involved-container"
+      >
         <div className="get-involved-content">
           <p className="get-involved-subtitle">SAFE / SECURE / PRIVATE</p>
           <h1 className="get-involved-title">The future of finance is DeFi</h1>
@@ -17,7 +28,7 @@ const GetInvolvedSection = () => {
         <a href="#get-involved" className="btn get-involved-button">
           GET INVOLVED <i className="fas fa-arrow-right"></i>
         </a>
-      </div>
+      </animated.div>
     </section>
   );
 };

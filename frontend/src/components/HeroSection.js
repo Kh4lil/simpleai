@@ -1,12 +1,19 @@
 import React from "react";
 import StarryBackground from "./StarryBackground";
 import "../styles/HeroSection.css";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 
 const HeroSection = () => {
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
+
   return (
     <section id="hero" className="hero-section">
       <StarryBackground />
-      <div className="hero-container">
+      <animated.div ref={ref} style={animation} className="hero-container">
         <div className="hero-content">
           <p className="hero-subtitle">SAFE / SECURE / PRIVATE</p>
           <h1 className="hero-title">The future of finance is DeFi</h1>
@@ -19,7 +26,7 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

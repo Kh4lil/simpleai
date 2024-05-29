@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+import { animated } from "react-spring";
 import "../styles/FAQSection.css";
 import FAQImage from "../assets/images/DeFi-graphic.svg";
 
 const FAQSection = () => {
   const [activeIndices, setActiveIndices] = useState([]);
+  const { ref, animation } = useInViewAnimation(
+    { opacity: 0, transform: "translateY(100px)" },
+    { opacity: 1, transform: "translateY(0px)" }
+  );
 
   const questions = [
     "How do I know that my investment is safe?",
@@ -39,7 +45,7 @@ const FAQSection = () => {
   return (
     <div className="faq-section">
       <div className="faq-container">
-        <div className="faq-content">
+        <animated.div ref={ref} style={animation} className="faq-content">
           <h2>Questions</h2>
           <p>
             Aliquam hendrerit ligula eu lobortis maximus. Praesent element
@@ -74,7 +80,7 @@ const FAQSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </animated.div>
         <div className="faq-image">
           <img src={FAQImage} alt="FAQ Illustration" />
         </div>

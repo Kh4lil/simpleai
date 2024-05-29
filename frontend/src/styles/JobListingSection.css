@@ -32,6 +32,7 @@
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #333;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .job-info h4 {
