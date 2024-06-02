@@ -17,16 +17,16 @@ const GetInvolvedSection = () => {
         className="get-involved-container"
       >
         <div className="get-involved-content">
-          <p className="get-involved-subtitle">SAFE / SECURE / PRIVATE</p>
-          <h1 className="get-involved-title">The future of finance is DeFi</h1>
+          <h1 className="get-involved-title">Your AI Journey Starts Here</h1>
           <p className="get-involved-text">
-            Aliquam hendrerit ligula eu lobortis maximus. Praesent elementum
-            rhoncus convallis. Vivamus sit amet malesuada augue, id sollicitudin
-            nunc. Quisque vehicula velit id scelerisque.
+            Embrace the future with AI-powered solutions tailored to your
+            business needs. Discover how our expertise can revolutionize your
+            products and drive growth. Schedule a free consultation to explore
+            your AI opportunities.
           </p>
         </div>
-        <a href="#get-involved" className="btn get-involved-button">
-          GET INVOLVED <i className="fas fa-arrow-right"></i>
+        <a href="#schedule-consultation" className="btn get-involved-button">
+          Schedule a Free Consultation <i className="fas fa-arrow-right"></i>
         </a>
       </animated.div>
     </section>

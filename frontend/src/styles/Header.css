@@ -81,15 +81,17 @@ header.custom-header.custom-header-scrolled {
   padding: 10px 30px;
   border-radius: 25px;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   white-space: nowrap;
   margin-left: 30px;
+  border: 2px solid transparent; /* Add border for better hover effect */
 }
 
 .cta-button:hover,
 .cta-button:focus {
-  background-color: #174038;
-  color: #fff !important;
+  background-color: #fff;
+  color: #1c544c !important;
+  border: 2px solid #1c544c; /* Change border color on hover */
 }
 
 .navbar-collapse {

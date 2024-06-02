@@ -2,62 +2,67 @@ import React from "react";
 import useInViewAnimation from "../hooks/useInViewAnimation";
 import { animated } from "react-spring";
 import "../styles/OurBenefitsSection.css";
-import image1 from "../assets/images/tempBenefit1.svg";
 
 const benefits = [
   {
-    icon: image1,
-    title: "Pause or Cancel Anytime",
-    description:
-      "Pause when you don't have more work, and resume where you left off, whenever.",
+    icon: "lnr lnr-tag",
+    title: "Transparent Pricing",
+    description: "Simple and clear pricing. No hidden fees.",
   },
   {
-    icon: "path/to/fixed-rates-icon.png",
-    title: "Fixed Monthly Rates. No Surprises",
-    description:
-      "Our pricing is transparent, and simple. You know exactly what you're paying, no surprise fees.",
+    icon: "lnr lnr-undo",
+    title: "Money-Back Guarantee",
+    description: "Not satisfied? Get a full refund in the first month.",
   },
   {
-    icon: "path/to/money-back-icon.png",
-    title: "Not Happy? Money Back",
-    description:
-      "If you don't like the work, within the first month of work, get all your money back. Guaranteed.",
+    icon: "lnr lnr-diamond",
+    title: "Unique Ownership",
+    description: "All work is 100% unique and owned by you.",
   },
   {
-    icon: "path/to/flexible-scalable-icon.png",
-    title: "Flexible & Scalable",
-    description:
-      "Scale up, or down, changing subscriptions if and when you need.",
-  },
-  {
-    icon: "path/to/onboarding-icon.png",
-    title: "24 Hour Onboarding",
-    description:
-      "Our process is simple, & streamline. Within 24 hours, you can get setup and start getting things done.",
-  },
-  {
-    icon: "path/to/unique-icon.png",
-    title: "100% Unique, and Always Yours",
-    description:
-      "All of our work is always unique to you, and 100% owned by you.",
-  },
-  {
-    icon: "path/to/unlimited-requests-icon.png",
+    icon: "lnr lnr-inbox",
     title: "Unlimited Requests",
-    description:
-      "Make as many requests as you need, and we'll get to them quickly.",
+    description: "Request as much as you need, anytime.",
   },
   {
-    icon: "path/to/high-quality-icon.png",
-    title: "High Quality Output",
-    description:
-      "We ensure the highest quality in all our work, delivering results you'll be proud of.",
+    icon: "lnr lnr-thumbs-up",
+    title: "Premium Quality",
+    description: "Top-notch quality in every project.",
   },
   {
-    icon: "path/to/fast-iterations-icon.png",
-    title: "Fast & Furious Iterations",
-    description:
-      "We iterate quickly, ensuring you get the best results in the shortest time possible.",
+    icon: "lnr lnr-clock",
+    title: "Fast Turnaround",
+    description: "Quick iterations for rapid results.",
+  },
+  {
+    icon: "lnr lnr-checkmark-circle",
+    title: "Perfection Guaranteed",
+    description: "Meticulous development and QA for flawless products.",
+  },
+  {
+    icon: "lnr lnr-cog",
+    title: "Ongoing Support",
+    description: "Continuous support even after launch.",
+  },
+  {
+    icon: "lnr lnr-rocket",
+    title: "Quality Focused",
+    description: "Expertise delivering high-quality software.",
+  },
+  {
+    icon: "lnr lnr-earth",
+    title: "Flexible Hours",
+    description: "US-based team aligning with all time zones.",
+  },
+  {
+    icon: "lnr lnr-lock",
+    title: "Data Security",
+    description: "NDA-secured for total confidentiality.",
+  },
+  {
+    icon: "lnr lnr-diamond",
+    title: "Industry Leading",
+    description: "Adapting to the best industry standards.",
   },
 ];
 
@@ -75,14 +80,14 @@ const OurBenefitsSection = () => {
         className="our-benefits-container"
       >
         <div className="header">
-          <h2>Benefits you get nowhere else</h2>
-          <p>Minthouse is a one-of-a-kind subscription you find nowhere else</p>
+          <h2>Exclusive Benefits</h2>
+          <p>Experience the unparalleled advantages of SimpleAI.</p>
         </div>
         <div className="benefits-cards">
           {benefits.map((benefit, index) => (
             <div className="benefit-card" key={index}>
               <div className="icon-wrapper">
-                <img src={benefit.icon} alt={benefit.title} />
+                <i className={benefit.icon}></i>
               </div>
               <h4>{benefit.title}</h4>
               <p>{benefit.description}</p>

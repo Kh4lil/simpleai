@@ -34,10 +34,13 @@ const HowItWorksSection = () => {
       <div className="container">
         <div className="row text-center">
           <div className="col-md-12">
-            <h2 className="section-title">How it Works</h2>
+            <h2 className="section-title">Step by Step</h2>
             <p className="section-subtitle">
-              Aliquam hendrerit ligula eu lobortis maximus. Praesent elementum
-              rhoncus convallis.
+              Build & Launch with Ease
+              <br />
+              Enjoy a seamless software development experience with our
+              customized approach, ensuring your vision transforms smoothly from
+              concept to completion.
             </p>
           </div>
         </div>
@@ -55,10 +58,10 @@ const HowItWorksSection = () => {
               >
                 1
               </animated.div>
-              <h3>Define</h3>
+              <h3>Let's Talk</h3>
               <p>
-                Nullam a arcu eget dolor pellen tesque condimen. Morbi mollis,
-                mauris quis suscipit feugiat eros.
+                Share your vision with us. We collaborate closely to understand
+                your needs and set the foundation for success.
               </p>
             </div>
           </div>
@@ -71,10 +74,10 @@ const HowItWorksSection = () => {
               >
                 2
               </animated.div>
-              <h3>Connect</h3>
+              <h3>Design & Plan</h3>
               <p>
-                Nullam a arcu eget dolor pellen tesque condimen. Morbi mollis,
-                mauris quis suscipit feugiat eros.
+                Visualize your project with stunning mockups and a strategic
+                plan that aligns with your goals.
               </p>
             </div>
           </div>
@@ -87,10 +90,10 @@ const HowItWorksSection = () => {
               >
                 3
               </animated.div>
-              <h3>Expand</h3>
+              <h3>Develop</h3>
               <p>
-                Nullam a arcu eget dolor pellen tesque condimen. Morbi mollis,
-                mauris quis suscipit feugiat eros.
+                Watch your ideas come to life as our expert developers build
+                your solution using cutting-edge technologies.
               </p>
             </div>
           </div>
@@ -103,10 +106,10 @@ const HowItWorksSection = () => {
               >
                 4
               </animated.div>
-              <h3>Scale</h3>
+              <h3>Launch & Grow</h3>
               <p>
-                Nullam a arcu eget dolor pellen tesque condimen. Morbi mollis,
-                mauris quis suscipit feugiat eros.
+                We ensure a smooth launch and provide ongoing support to help
+                your business scale and thrive.
               </p>
             </div>
           </div>
