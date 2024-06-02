@@ -15,11 +15,11 @@ const HeroSection = () => {
       <StarryBackground />
       <animated.div ref={ref} style={animation} className="hero-container">
         <div className="hero-content">
-          <p className="hero-subtitle">SAFE / SECURE / PRIVATE</p>
-          <h1 className="hero-title">The future of finance is DeFi</h1>
+          <p className="hero-subtitle">SPEED | INNOVATION | CUSTOMIZATION</p>
+          <h1 className="hero-title">AI solutions for modern businesses</h1>
           <div className="hero-buttons">
             <a href="#start" className="btn btn-primary hero-button">
-              Start for Free
+              Schedule a call
             </a>
             <a href="#learn" className="btn btn-secondary hero-button">
               Learn More

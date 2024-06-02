@@ -17,10 +17,10 @@ const FindOutMoreSection = () => {
         className="find-out-more-container"
       >
         <div className="header">
-          <h2>Find out more</h2>
+          <h2>Find Out More</h2>
           <p>
-            Hendrerit ligula eu lobortis maximus. Praesent elementum rhoncus
-            convallis dapibus turpis lorem enim.
+            Discover more about our team, career opportunities, and how to get
+            in touch.
           </p>
         </div>
         <div className="info-cards">
@@ -30,8 +30,8 @@ const FindOutMoreSection = () => {
             </div>
             <h4>Meet the Team</h4>
             <p>
-              Aliquam hendrerit ligula eu lobortis maximus. Praesent elementum
-              rhoncus convallis.
+              We're a close-knit team in Austin, TX, passionate about AI and
+              innovation. Get to know the people behind the magic.
             </p>
             <a href="#0">Learn more »</a>
           </div>
@@ -41,8 +41,8 @@ const FindOutMoreSection = () => {
             </div>
             <h4>Careers</h4>
             <p>
-              Nullam porta, risus quis sollicitudin tempus, nibh enim venenatis
-              ante, ac lobortis lacus ligula.
+              Join our dynamic team and help shape the future of AI. We're
+              always looking for creative and driven individuals.
             </p>
             <a href="#0">We're hiring »</a>
           </div>
@@ -52,8 +52,8 @@ const FindOutMoreSection = () => {
             </div>
             <h4>Contact Us</h4>
             <p>
-              Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl.
-              Duis in lectus ac nibh molestie.
+              Have questions or want to collaborate? We'd love to hear from you!
+              Reach out and let's start a conversation.
             </p>
             <a href="#0">Reach out »</a>
           </div>

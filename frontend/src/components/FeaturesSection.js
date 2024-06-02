@@ -10,24 +10,43 @@ const FeaturesSection = () => {
   );
 
   return (
-    <section id="powerful" className="features-section">
+    <section id="services" className="features-section">
       <div className="container">
         <animated.div ref={ref} style={animation} className="features-grid">
           <div className="features-header">
-            <h2>Powerful features</h2>
+            <h2>Our Services</h2>
             <p>
-              Aliquam hendrerit ligula eu lobortis maximus. Praesent elementum
-              rhoncus convallis.
+              Empowering your business with cutting-edge technology and tailored
+              solutions.
             </p>
           </div>
           <div className="feature">
             <div className="icon-wrapper">
-              <i className="lnr lnr-lock"></i>
+              <i className="lnr lnr-laptop-phone"></i>
             </div>
-            <h4>Completely trustless</h4>
+            <h4>Web & App Development</h4>
+            <p>Build responsive web applications with modern technologies.</p>
             <p>
-              Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl.
-              Duis in lectus ac nibh molestie.
+              <a href="#0">Learn more »</a>
+            </p>
+          </div>
+          <div className="feature">
+            <div className="icon-wrapper">
+              <i className="lnr lnr-cog"></i>
+            </div>
+            <h4>AI Product Development</h4>
+            <p>Innovate with AI-driven products that set you apart.</p>
+            <p>
+              <a href="#0">Learn more »</a>
+            </p>
+          </div>
+          <div className="feature">
+            <div className="icon-wrapper">
+              <i className="lnr lnr-code"></i>
+            </div>
+            <h4>Custom Software</h4>
+            <p>
+              Tailored full-stack software solutions using Agile methodologies.
             </p>
             <p>
               <a href="#0">Learn more »</a>
@@ -35,51 +54,41 @@ const FeaturesSection = () => {
           </div>
           <div className="feature">
             <div className="icon-wrapper">
-              <i className="lnr lnr-safe"></i>
+              <i className="lnr lnr-sync"></i>
             </div>
-            <h4>Proven, tested system</h4>
-            <p>
-              Aenean tristique iaculis nisi vel efficitur. Etiam tincidunt
-              vulputate neque, ut tempus diam.
-            </p>
+            <h4>System Integrations</h4>
+            <p>Seamlessly integrate new apps with your existing systems.</p>
             <p>
               <a href="#0">Learn more »</a>
             </p>
           </div>
           <div className="feature">
             <div className="icon-wrapper">
-              <i className="lnr lnr-world"></i>
+              <i className="lnr lnr-database"></i>
             </div>
-            <h4>Global network</h4>
-            <p>
-              Nullam porta, risus quis sollicitudin tempus, nibh enim venenatis
-              ante, ac lobortis lacus ligula.
-            </p>
+            <h4>Data & Analytics</h4>
+            <p>Unlock actionable insights with advanced data analytics.</p>
             <p>
               <a href="#0">Learn more »</a>
             </p>
           </div>
           <div className="feature">
             <div className="icon-wrapper">
-              <i className="lnr lnr-location"></i>
+              <i className="lnr lnr-users"></i>
             </div>
-            <h4>Endlessly scalable</h4>
-            <p>
-              Aliquam hendrerit ligula eu lobortis maximus. Praesent elementum
-              rhoncus convallis.
-            </p>
+            <h4>Agile Teams</h4>
+            <p>Accelerate development with our US-based Agile teams.</p>
             <p>
               <a href="#0">Learn more »</a>
             </p>
           </div>
           <div className="feature">
             <div className="icon-wrapper">
-              <i className="lnr lnr-layers"></i>
+              <i className="lnr lnr-diamond"></i>
             </div>
-            <h4>Blockchain technology</h4>
+            <h4>End-to-End Solutions</h4>
             <p>
-              Ut aliquet orci quis dignissim elementum. Ut gravida iaculis
-              maximus sed pretium.
+              Comprehensive, tailor-made solutions from concept to deployment.
             </p>
             <p>
               <a href="#0">Learn more »</a>
