@@ -15,11 +15,14 @@ const HeroSection = () => {
       <StarryBackground />
       <animated.div ref={ref} style={animation} className="hero-container">
         <div className="hero-content">
-          <p className="hero-subtitle">SPEED | INNOVATION | CUSTOMIZATION</p>
-          <h1 className="hero-title">AI solutions for modern businesses</h1>
+          <h1 className="hero-title">Smart AI Solutions for Modern Needs</h1>
+          <p className="hero-text">
+            We're a close-knit team in Austin, TX, committed to building AI
+            solutions that transform your vision into reality.
+          </p>
           <div className="hero-buttons">
             <a href="#start" className="btn btn-primary hero-button">
-              Schedule a call
+              Schedule a Call
             </a>
             <a href="#learn" className="btn btn-secondary hero-button">
               Learn More
